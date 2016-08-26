@@ -1,0 +1,32 @@
+<div class="home-view" layout="row" layout-align="center center" flex="100" ng-init="credito.init()">
+    <div class="page-view" layout="column" flex="100">
+        <div layout="row" layout-align="center center" layout-padding flex="100">
+            <form name="form" flex="80">
+                <div layout="column" flex="100">
+                    <md-input-container>
+                        <label>WSDL</label>
+                        <input name="wsdl" ng-model="vm.wsdl" required>
+                        <px-message px-element="form.wsdl"></px-message>
+                    </md-input-container>
+                    <md-input-container>
+                        <label>OPERATION</label>
+                        <input name="operation" ng-model="vm.operation" required>
+                        <px-message px-element="form.operation"></px-message>
+                    </md-input-container>
+                    <div layout="column">
+                        <label>DATA (JSON) | Ex.: {"id": 8}</label>
+                        <textarea ng-model="vm.data" flex="30"></textarea>
+                    </div>
+                    <div layout="column" layout-align="center center">
+                        <md-button class="md-raised md-primary" ng-disabled="form.$invalid" ng-click="vm.post($event)">Consumir Web Service</md-button>
+                        <md-progress-linear md-mode="indeterminate" ng-show="vm.loading"></md-progress-linear>
+                    </div>
+                    <div layout="column">
+                        <label for="data">LOG</label>
+                        <textarea ng-model="vm.response" flex="30"></textarea>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

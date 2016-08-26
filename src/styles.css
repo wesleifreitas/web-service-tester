@@ -1,0 +1,22 @@
+div.home-view {
+	position: absolute;
+	bottom: 10px;
+	top: 0px;
+	right: 1px;
+	width: 100%;
+	padding: 0px 80px 0px 80px;
+	overflow: auto;
+	color: #666;
+	overflow-y: auto;
+	margin-top: 0px;/**/
+}
+.page-view {
+	box-shadow: 0 0 0 1px rgba(187, 187, 187, 0.1), 0 0px 12px rgba(0, 0, 0, 0.1);
+	overflow-y: auto;
+}
+div label {
+	color: #CCCCCC;
+}
+textarea {
+	resize: vertical;
+}
